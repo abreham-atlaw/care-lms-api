@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-1c^os&f2gos)dqg-uall(%*hvlyx7g##x0v8&e5b)j!l31yciz
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -122,6 +122,6 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
-API_URL = "https://127.0.0.1:8888/"
+FRONT_END_URL = "http://192.168.1.101:8888/"
 
 CERTIFICATE_TEMPLATE_PATH = RES_DIR / "certificate_template/01.png"

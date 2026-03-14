@@ -8,4 +8,4 @@ class CertificateUtils:
 
 	@staticmethod
 	def generate_certificate_url(certificate: Certificate) -> str:
-		return os.path.join(settings.API_URL, f"api/certificates/verify?id={certificate.id.hex}")
+		return os.path.join(settings.FRONT_END_URL, f"api/certificate/certificate/details/?id={certificate.id.hex}")

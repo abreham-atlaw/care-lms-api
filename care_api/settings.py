@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-1c^os&f2gos)dqg-uall(%*hvlyx7g##x0v8&e5b)j!l31yciz
 DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
-
+CORS_ALLOW_ALL_ORIGINS = True
 
 # Application definition
 
@@ -39,6 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+	"corsheaders",
+
 	"rest_framework",
 
 	"apps.certificate",
@@ -46,6 +48,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+	"corsheaders.middleware.CorsMiddleware",
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -125,3 +128,4 @@ STATIC_URL = 'static/'
 FRONT_END_URL = "http://192.168.1.101:8888/"
 
 CERTIFICATE_TEMPLATE_PATH = RES_DIR / "certificate_template/01.png"
+CERTIFICATE_TEMPLATE_CONFIG_PATH = RES_DIR / "certificate_template/01.json"

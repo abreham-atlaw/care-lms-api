@@ -14,5 +14,6 @@ class UtilsProviders:
 	def provide_certificate_generator() -> CertificateGenerator:
 		return PillowCertificateGenerator(
 			template_path=settings.CERTIFICATE_TEMPLATE_PATH,
-			qr_generator=UtilsProviders.provide_qr_generator()
+			qr_generator=UtilsProviders.provide_qr_generator(),
+			config_path=settings.CERTIFICATE_TEMPLATE_CONFIG_PATH
 		)

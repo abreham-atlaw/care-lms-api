@@ -18,6 +18,7 @@ class PillowCertificateGeneratorTest(SimpleTestCase):
 
 		certificate = Certificate.objects.create(
 			full_name="John Doe",
+			course="Health Care Quality Improvement"
 		)
 
 		generator = UtilsProviders.provide_certificate_generator()
